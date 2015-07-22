@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SimsTraitGenerator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="query"> Which age are you aging up to? </string>
+    <string name="button"> Generate </string>
+    <string name="result_box"> Results\n</string>
+    <string name = "clear_results"> Clear Results </string>
+
+
+    <string name="option1"> Determine Category</string>
+    <string name="option2"> Determine Traits</string>
+
+
+    <string-array name="age_array">
+        <item> Birth</item>
+        <item> Child </item>
+        <item> Teen </item>
+        <item> Young Adult </item>
+    </string-array>
+
+
+    <string name="title_activity_choose">ChooseActivity</string>
+    <string name="enter_label"> Enter Trait: </string>
+    <string name="trait_label"> Traits Entered: \n</string>
+    <string name="field_hint"> Enter trait here </string>
+    <string name="winner_string">Winner: </string>
+</resources>
