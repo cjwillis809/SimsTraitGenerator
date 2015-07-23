@@ -1,12 +1,14 @@
 package com.example.cj.simstraitgenerator;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,6 +43,18 @@ public class TraitListActivity extends ListActivity {
         //ListView listView = (ListView) findViewById(R.id.listview);
         setListAdapter(adapter);
         getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE); //allows multiple choice
+        final Button doneButton = new Button(this);
+        doneButton.setText("Done");
+        doneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putStringArrayListExtra("TRAITS", chosen);
+                setResult(1, intent);
+                finish();
+            }
+        });
+        getListView().addFooterView(doneButton);
 
 
     }

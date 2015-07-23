@@ -14,14 +14,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Vector;
 
 
 public class ChooseActivity extends ActionBarActivity {
 
-    Vector<String> vector = new Vector<String>();
+    ArrayList<String> traitList = new ArrayList<String>();
     Random rand = new Random();
+    static final int TRAIT_REQUEST = 1; //Request code for traits selected
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class ChooseActivity extends ActionBarActivity {
     }*/
 
     public void reset(View view){
-        vector.clear();
+        traitList.clear();
         TextView tv = (TextView) findViewById(R.id.trait_view);
         tv.setText(R.string.trait_label);
         Toast.makeText(getApplicationContext(), "Cleared", Toast.LENGTH_SHORT).show();
@@ -63,9 +65,9 @@ public class ChooseActivity extends ActionBarActivity {
 
     public void determine(View v)
     {
-        int choice = rand.nextInt(vector.size());
+        int choice = rand.nextInt(traitList.size());
         TextView tv = (TextView) findViewById(R.id.winner_view);
-        tv.setText("Winner: " + vector.get(choice));
+        tv.setText("Winner: " + traitList.get(choice));
 
     }
 
@@ -102,8 +104,22 @@ public class ChooseActivity extends ActionBarActivity {
     }
 
     public void listActivity(View view) {
+
         Intent intent = new Intent(this, TraitListActivity.class);
-        startActivity(intent);
+        //startActivity(intent);
+        startActivityForResult(intent, TRAIT_REQUEST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        TextView tv = (TextView) findViewById(R.id.trait_view);
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == TRAIT_REQUEST){
+            traitList = data.getStringArrayListExtra("TRAITS");
+            for (int i = 0; i < traitList.size(); i++){
+                tv.append(traitList.get(i) + "\n");
+            }
+        }
     }
 
     /* Don't need this anymore
