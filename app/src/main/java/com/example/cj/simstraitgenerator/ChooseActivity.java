@@ -20,7 +20,7 @@ import java.util.Vector;
 
 public class ChooseActivity extends ActionBarActivity {
 
-    Vector<String> vector = new Vector<String>(10);
+    Vector<String> vector = new Vector<String>();
     Random rand = new Random();
 
     @Override
@@ -84,11 +84,11 @@ public class ChooseActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         switch(id){
-            case R.id.generator:
+            case R.id.main_action_button:
                 mainActivity();
                 return true;
-            case R.id.determiner:
-                chooseActivity();
+            case R.id.choose_action_button:
+                //chooseActivity();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -100,8 +100,9 @@ public class ChooseActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    /* Don't need this anymore
     private void chooseActivity() {
         Intent intent = new Intent(this, ChooseActivity.class);
         startActivity(intent);
-    }
+    }*/
 }

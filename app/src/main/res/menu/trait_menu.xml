@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:id="@+id/generator"
-      android:title="@string/option1"/>
-  <item android:id="@+id/determiner"
-      android:title="@string/option2" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Main Activity action button -->
+    <item android:id="@+id/main_action_button"
+        android:icon="@drawable/ic_assignment_white_24dp"
+        android:title="@string/action_bar_main"
+        app:showAsAction="ifRoom" />
+
+    <!-- Choose Activity action button -->
+    <item android:id="@+id/choose_action_button"
+        android:icon="@drawable/ic_accessibility_white_24dp"
+        android:title="@string/action_bar_trait"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Always show settings in the overflow -->
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
 </menu>
+
+    <!-- Almost the same as menu_main. In the future, could I just use the same menu file for the settings? -->

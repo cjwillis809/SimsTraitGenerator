@@ -158,14 +158,18 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         int id = item.getItemId();
 
         switch(id){
+            /*
             case R.id.generator:
                 mainActivity();
                 return true;
             case R.id.determiner:
                 chooseActivity();
-                return true;
+                return true;*/
             case R.id.choose_action_button:
                 chooseActivity();
+                return true;
+            case R.id.main_action_button:
+                //mainActivity();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -180,10 +184,11 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         return super.onOptionsItemSelected(item);*/
     }
 
+    /* Don't need this method
     private void mainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+    }*/
 
     private void chooseActivity() {
         Intent intent = new Intent(this, ChooseActivity.class);

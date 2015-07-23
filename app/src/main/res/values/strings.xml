@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">SimsTraitGenerator</string>
+    <string name="app_name">Sims Trait Generator</string>
+    <string name="main_title">Sims Trait Category</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -8,11 +9,12 @@
     <string name="result_box"> Results\n</string>
     <string name = "clear_results"> Clear Results </string>
 
-
+    <!-- Old Menu Strings
     <string name="option1"> Determine Category</string>
-    <string name="option2"> Determine Traits</string>
+    <string name="option2"> Determine Traits</string>-->
 
     <string name="action_bar_trait"> Traits</string>
+    <string name="action_bar_main"> Categories</string>
 
 
     <string-array name="age_array">
@@ -23,7 +25,7 @@
     </string-array>
 
 
-    <string name="title_activity_choose">ChooseActivity</string>
+    <string name="title_activity_choose">Trait Randomizer</string>
     <string name="enter_label"> Enter Trait: </string>
     <string name="trait_label"> Traits Entered: \n</string>
     <string name="field_hint"> Enter trait here </string>

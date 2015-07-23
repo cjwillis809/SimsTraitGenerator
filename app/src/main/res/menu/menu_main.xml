@@ -2,6 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
+    <!-- Main Activity action button -->
+    <item android:id="@+id/main_action_button"
+        android:icon="@drawable/ic_assignment_white_24dp"
+        android:title="@string/action_bar_main"
+        app:showAsAction="ifRoom" />
+
     <!-- Choose Activity action button -->
     <item android:id="@+id/choose_action_button"
         android:icon="@drawable/ic_accessibility_white_24dp"
