@@ -43,15 +43,16 @@ public class ChooseActivity extends ActionBarActivity {
         })*/
     }
 
+    /*
     public void addTrait(View view) {
-        EditText editText = (EditText) findViewById(R.id.trait_field);
-        String a = editText.getText().toString();
+        //EditText editText = (EditText) findViewById(R.id.trait_field);
+        //String a = editText.getText().toString();
         vector.add(a);
         TextView t = (TextView) findViewById(R.id.trait_view);
         t.append(a + "\n");
-        editText.selectAll();
+        //editText.selectAll();
         Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     public void reset(View view){
         vector.clear();
@@ -97,6 +98,11 @@ public class ChooseActivity extends ActionBarActivity {
 
     private void mainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void listActivity(View view) {
+        Intent intent = new Intent(this, TraitListActivity.class);
         startActivity(intent);
     }
 

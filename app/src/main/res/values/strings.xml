@@ -27,7 +27,8 @@
 
     <string name="title_activity_choose">Trait Randomizer</string>
     <string name="enter_label"> Enter Trait: </string>
-    <string name="trait_label"> Traits Entered: \n</string>
+    <string name="trait_label"> Traits Selected: \n</string>
     <string name="field_hint"> Enter trait here </string>
     <string name="winner_string">Winner: </string>
+    <string name="title_activity_trait_list">TraitListActivity</string>
 </resources>
