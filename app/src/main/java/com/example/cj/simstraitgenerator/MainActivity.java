@@ -27,6 +27,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         //Start
+
+        //Drop down menu
         Spinner spinner = (Spinner) findViewById(R.id.age_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.age_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -46,7 +48,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             default: chance = 4; break;
         }
         showOdds();
-        Toast.makeText(getApplicationContext(), mark, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), mark, Toast.LENGTH_SHORT).show();
 }
 
     private void showOdds() {
@@ -142,7 +144,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.trait_menu, menu);
+        //inflater.inflate(R.menu.trait_menu, menu);
+        inflater.inflate(R.menu.menu_main, menu);
         //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -159,6 +162,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 mainActivity();
                 return true;
             case R.id.determiner:
+                chooseActivity();
+                return true;
+            case R.id.choose_action_button:
                 chooseActivity();
                 return true;
             default:

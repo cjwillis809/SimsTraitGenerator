@@ -12,6 +12,8 @@
     <string name="option1"> Determine Category</string>
     <string name="option2"> Determine Traits</string>
 
+    <string name="action_bar_trait"> Traits</string>
+
 
     <string-array name="age_array">
         <item> Birth</item>
